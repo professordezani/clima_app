@@ -1,18 +1,38 @@
 import 'package:flutter/material.dart';
+import 'item.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
 
-  // This widget is the root of your application.
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Image.asset("images/chuva.png"),
+        backgroundColor: Colors.lightBlue,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text("Mirassol"),
+            Column(
+              children: [
+                Image.asset('images/sol.png'),
+                Text("Sol"),
+                Text("36.8°C"),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Item('umidade', 'Umidade', '52%'),
+                Item('vento', 'Vento', '19km/h'),
+                Item('sensacao', 'Sensação', '32°C'),
+              ]
+            ),
+          ]
+        ),
       ),
     );
   }
