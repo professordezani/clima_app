@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-const cityText = TextStyle(
+const cidadeStyle = TextStyle(
   fontSize: 40,
 );
 
-const statusText = TextStyle(
+const climaStyle = TextStyle(
   fontSize: 32,
 );
 
-const temperatureText = TextStyle(
-  fontSize: 40,
+const temperaturaStyle = TextStyle(
+  fontSize: 50,
   shadows: [
     Shadow(
       color: Colors.black,
-      offset: Offset(4, 4),
+      offset: Offset(2,4),
       blurRadius: 5
-    )
+    ),
   ]
 );

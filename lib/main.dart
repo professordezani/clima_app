@@ -13,22 +13,23 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: TextTheme(
           bodyMedium: TextStyle(
+            fontSize: 18,
             color: Colors.white,
-            fontSize: 20,
-          ),
-        )
+            fontWeight: FontWeight.bold,
+          )
+        ),
       ),
       home: Scaffold(
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Colors.blue[700],
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Text("Mirassol", style: cityText,),
+            Text("Mirassol", style: cidadeStyle),
             Column(
               children: [
                 Image.asset('images/sol.png'),
-                Text("Sol", style: statusText),
-                Text("36.8°C", style: temperatureText),
+                Text("Sol", style: climaStyle),
+                Text("36.8°C", style: temperaturaStyle),
               ],
             ),
             Row(
