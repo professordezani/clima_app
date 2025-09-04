@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'item.dart';
+import 'style.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,17 +10,25 @@ class MyApp extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        textTheme: TextTheme(
+          bodyMedium: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+          ),
+        )
+      ),
       home: Scaffold(
         backgroundColor: Colors.lightBlue,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Text("Mirassol"),
+            Text("Mirassol", style: cityText,),
             Column(
               children: [
                 Image.asset('images/sol.png'),
-                Text("Sol"),
-                Text("36.8°C"),
+                Text("Sol", style: statusText),
+                Text("36.8°C", style: temperatureText),
               ],
             ),
             Row(
