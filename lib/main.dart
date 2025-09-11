@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'item.dart';
 import 'style.dart';
+import 'forecast.dart';
 
 void main() {
   runApp(MyApp());
@@ -41,6 +42,21 @@ class MyApp extends StatelessWidget {
                 Item('sensacao', 'Sensação', '32°C'),
               ]
             ),
+            Container(
+              height: 120,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Forecast("7AM", "nublado", "20°C"),
+                  Forecast("8AM", "chuva", "20°C"),
+                  Forecast("9AM", "sol", "20°C"),
+                  Forecast("10AM", "sol", "20°C"),
+                  Forecast("11AM", "chuva", "20°C"),
+                  Forecast("12PM", "nublado", "20°C"),
+                  Forecast("1PM", "chuva", "20°C"),
+                ],
+              ),
+            )
           ]
         ),
       ),
